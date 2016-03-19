@@ -15,3 +15,10 @@ describe('User Profile directive test', function() {
     expect(description.getInnerHtml()).toContain('William Henry "Bill" Gates III (born October 28, 1955)');
   });
 });
+
+// it('should display the correct info', function(){
+//   var directive = element.all(by.css('user-profile'));
+//   expect(directive.get(0).getText()).toContain('Name:');
+//   expect(directive.get(0).getText()).toContain('Position:');
+//   expect(directive.get(0).getText()).toContain('Description:');
+// });
