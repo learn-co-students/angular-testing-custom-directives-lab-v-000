@@ -3,7 +3,7 @@ describe('Directive Test', function(){
 
   var firstUser = element(by.css('.user'));
   // console.log(firstUser);
-  // browser.pause();
+  browser.debugger();
   it('should have name filled in', function(){
     expect(firstUser.children[1].textContent).toEqual("Name: Bill Gates");
   })
