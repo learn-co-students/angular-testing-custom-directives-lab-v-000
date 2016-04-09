@@ -5,8 +5,11 @@ describe('Directive Test', function(){
   var firstUser = users.get(0).getText();
 
   it('should have name filled in', function(){
-    expect(firstUser).toI
-    // expect(firstUser.children[1].textContent).toEqual("Name: Bill Gates");
+    expect(firstUser).toContain('Name:\nBill Gates')
+  })
+
+	it('should have position filled in', function(){
+		expect(firstUser).toContain('Position:\nChairman, Microsoft')
   })
 
 });
