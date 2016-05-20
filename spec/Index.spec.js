@@ -1,8 +1,12 @@
 describe('User Profile Directive test', function() {
   browser.get('http://localhost:8080');
-  var name = element(by.css('.user:nth-child(0)'));
-  var position = element(by.css('.user:nth-child(1)'));
-  var description = element(by.css('.user:nth-child(2)'));
-  
 
-})
+  it('should display the info correctly', function() {
+    var directive = element.all(by.css('user-profile'));
+
+    expect(directive.get(0).getText()).toContain('Name');
+    expect(directive.get(0).getText()).toContain('Position');
+    expect(directive.get(0).getText()).toContain('Description');
+    expect(directive.get(0).getText()).toContain('Bill Gates');
+  })
+});
