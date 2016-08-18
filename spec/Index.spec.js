@@ -11,3 +11,5 @@ describe('Directive Test', function () {
     expect(directive.get(1).getText()).toContain('Tim Cook');
   })
 });
+
+//
