@@ -6,12 +6,26 @@ describe('UserProfile Directive Test', function() {
     expect(directive.getInnerHtml()).not.toEqual('');
   });
   
-  it('should contain the Name label', function() {
+  it('should contain the "Name:" label', function() {
     expect(directive.get(0).getText()).toContain('Name:');
   });
   it('should contain the right name', function() {
     //expect(directive.get(0).getText()).toContain('Bill Gates');
     expect(directive.get(0).element(by.css('h4')).getInnerHtml()).toContain('Bill Gates');
+  });
+
+  it('should contain the "Position:" label', function() {
+    expect(directive.get(0).getText()).toContain('Position');
+  });
+  it('should contain the right position', function() {
+    expect(directive.get(0).element(by.css('h6')).getInnerHtml()).toContain('Chairman, Microsoft');
+  });
+
+  it('should contain the "Description: " label', function() {
+    expect(directive.get(0).getText()).toContain('Description:');
+  });
+  it('should contain the right description', function() {
+    expect(directive.get(0).element(by.css('p')).getInnerHtml()).toContain('William Henry \"Bill\" Gates III \(born October 28, 1955\) is an American business magnate');
   });
 
 
