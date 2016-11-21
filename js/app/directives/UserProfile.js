@@ -7,10 +7,13 @@ function UserProfile() {
 		},
 		template: [
 			'<div class="user">',
-				'<h2>User Profile</h2>',
-				'<div>Name: <span ng-transclude="name"></span></div>',
-				'<div>Position: <span ng-transclude="position">No position</span></div>',
-				'<div>Description: <span ng-transclude="description">No description</span></div>',
+				'<h3>User Profile</h3>',
+				'<label>Name</label>',
+				'<div ng-transclude="name"></div>',
+				'<label>Position</label>',
+				'<div ng-transclude="position"></div>',
+				'<label>Description</label>',
+				'<div ng-transclude="description"></div>',
 			'</div>'
 		].join('')
 	}
