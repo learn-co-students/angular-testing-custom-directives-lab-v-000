@@ -12,7 +12,10 @@ function UserProfile() {
 				'<div>Position: <span ng-transclude="position">No position</span></div>',
 				'<div>Description: <span ng-transclude="description">No description</span></div>',
 			'</div>'
-		].join('')
+		].join(''), 
+		link: function(scope, element, attr, ctrl) {
+			debugger
+		}
 	}
 }
 
