@@ -1,19 +1,12 @@
 describe('Directive Test', function() {
   browser.get('http://localhost:8080');
 
-  var name = element(by.css('.name'));
-  var position = element(by.css('.position'));
-  var description = element(by.css('.description'));
+  it('should display the info correctly', function() {
+    var directive = element.all(by.css('user-profile'));
 
-  it('should have a Name label', function() {
-    expect(name.getInnerHtml()).toEqual('Name: ');
-  });
-
-  it('should have a Position label', function() {
-    expect(position.getInnerHtml()).toEqual('Position: ');
-  });
-
-  it('should have a Description label', function() {
-    expect(description.getInnerHtml()).toEqual('Description: ');
-  });
+    expect(directive.get(1).getText()).toContain('Name');
+    expect(directive.get(1).getText()).toContain('Position');
+    expect(directive.get(1).getText()).toContain('Description');
+    expect(directive.get(1).getText()).toContain('Tim Cook');
+  })
 });
