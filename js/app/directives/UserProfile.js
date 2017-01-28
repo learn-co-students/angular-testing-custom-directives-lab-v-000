@@ -19,3 +19,4 @@ function UserProfile() {
 angular
 	.module('app')
 	.directive('userProfile', UserProfile);
+	
